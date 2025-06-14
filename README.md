@@ -1,4 +1,6 @@
 
+# AS RENDER PROVIDED DOCUMENTATION THE FIRST API REQUEST COULD TAKE TIME OK !!
+
 # Project Title
 
 A brief description of what this project does and who it's for
