@@ -50,6 +50,8 @@ export default function Dashboard() {
     return { start, end };
   };
 
+  
+
   const { start, end } = getMonthStartEnd(budgetMonth);
   const { data, isLoading, isError } = useSummary(start, end);
 
@@ -175,21 +177,22 @@ export default function Dashboard() {
           </Card>
 
           <Card className="p-4">
-            <h2 className="text-lg font-semibold mb-2">Spending Over Time</h2>
-           {data.recent_transactions && data.recent_transactions?.filter(t => t.category.type === "expense").length > 0 ? (
-                <TransactionLineChart
+            <h2 className="text-lg font-semibold mb-2">Spending Over Time - (This Month)</h2>
+            {data?.recent_transactions?.some(t => t.category_details.type === "expense") ? (
+              <TransactionLineChart
                 transactions={data.recent_transactions
-                    .filter(t => t.category.type === "expense")
-                    .map(t => ({
+                  .filter(t => t.category_details.type === "expense")
+                  .map(t => ({
                     date: t.date,
                     amount: parseFloat(t.amount),
-                    }))
-                }
-                />
+                  }))}
+              />
             ) : (
-                <p className="text-sm text-muted-foreground">No expense data to display.</p>
+              <p className="text-sm text-muted-foreground">No expense data to display.</p>
             )}
-            </Card>
+
+          </Card>
+
 
            <Card className="p-4 h-full overflow-x-auto">
       <h2 className="text-lg font-semibold mb-4">Recent Transactions</h2>
@@ -220,12 +223,12 @@ export default function Dashboard() {
                   <TableCell>
                     <span
                       className={`text-xs px-2 py-1 rounded-full font-medium ${
-                        t.category.type === "expense"
+                        t.category_details.type === "expense"
                           ? "bg-red-100 text-red-600"
                           : "bg-green-100 text-green-600"
                       }`}
                     >
-                      {t.category.type}
+                      {t.category_details.type}
                     </span>
                   </TableCell>
                 </TableRow>

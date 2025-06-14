@@ -10,6 +10,12 @@ interface Transaction {
   created_at: string;
   category: number;
   user: number;
+  category_details	: {
+    id: number;
+    name: string;
+    type: "income" | "expense";
+    user: number;
+  }
 }
 
 interface TransactionResponse {

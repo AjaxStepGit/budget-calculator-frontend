@@ -45,6 +45,8 @@ export default function DashboardPage() {
     if (closeBtn) (closeBtn as HTMLButtonElement).click();
   };
 
+
+
   return (
     <div className="flex relative flex-col lg:flex-row bg-white h-full w-full">
       <div className="flex justify-between sticky lg:hidden top-0 bg-white h-[50px] shadow-xl w-full z-10">
