@@ -1,4 +1,4 @@
-import { EditIcon, Trash2 } from "lucide-react";
+import { EditIcon } from "lucide-react";
 import { Button } from "./ui/button";
 import { Card } from "./ui/card";
 import {
