@@ -1,59 +1,53 @@
-<<<<<<< HEAD
-# budget-calculator-frontend
-This is frontend of budget calculator
-=======
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Project Title
 
-Currently, two official plugins are available:
+A brief description of what this project does and who it's for
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Budget Tracker - Frontend
 
-## Expanding the ESLint configuration
+This is the frontend of the Budget Tracker app built using **React**, **TypeScript**, and **TailwindCSS**. It allows users to track income, expenses, budgets, and visualize financial summaries.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🛠 Tech Stack
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- React + Vite + TypeScript
+- TailwindCSS
+- TanStack Query (React Query)
+- React Router
+- ShadCN UI Components
+- Axios
+
+## 🚀 Features
+
+- Authenticated Dashboard
+- Add/Edit/Delete:
+  - Transactions
+  - Categories
+  - Budgets
+- Summary with Pie & Bar Charts
+- Responsive design
+- Role-based route protection
+
+## 🔧 Getting Started
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/AjaxStepGit/budget-calculator-frontend.git
+cd budget-app-frontend
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 2. Install the Dependency & Run server
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```bash
+npm i
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+npm run dev (but firstly setup django and run backend if testing locally)
 ```
->>>>>>> 2bd83a3 (Initial commit)
+
+## Test Credentials 
+
+username - testuser
+password - testpass123
+
+
+
