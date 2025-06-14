@@ -5,6 +5,8 @@ import { Card } from "./ui/card";
 import { Input } from "./ui/input";
 import { Label } from "./ui/label";
 import { useNavigate } from "react-router-dom";
+import { Popover } from "./ui/popover";
+import { PopoverContent, PopoverTrigger } from "@radix-ui/react-popover";
 
 export default function Login() {
   const [username, setUsername] = useState("");
@@ -40,9 +42,18 @@ export default function Login() {
         className="flex flex-col g-4 lg:my-16 items-center p-4"
       >
         <h1 className="text-2xl font-bold">Log in</h1>
-        <p className="text-xs text-gray-700 mb-8">
-          Don't have an account? <u>Sign up</u>
-        </p>
+        <Popover>
+          <PopoverTrigger>
+            <p className="text-xs text-gray-700 mb-8 mt-2">
+            Don't have an account? <u>Sign in with our test credentials</u>
+            </p>
+          </PopoverTrigger>
+          <PopoverContent className="bg-white p-3 -translate-y-6 rounded-xl shadow-xl border-3 border-gray-800">
+            <p className="font-medium text-xs">Username: testuser</p>
+            <p className="font-medium text-xs">Password: testpass123</p>
+          </PopoverContent>
+        </Popover>
+       
 
         <Label className="text-xs text-gray-700">Your username</Label>
         <Input
